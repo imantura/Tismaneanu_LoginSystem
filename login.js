@@ -50,12 +50,12 @@ app.post('/logedIn', async(req, res) => {
     if (userByUid) {
       await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).updateOne({ uid: uid }, { $inc: { attendance: 1 } });
     } else {
-      const userByFullName = await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).findOne({ firstName: firstName, lastName: lastName });
+      const userByFullName = await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).findOne({ firstName: firstName.toUpperCase(), lastName: lastName.toUpperCase() });
      
       if (userByFullName) {
-        await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).updateOne({ firstName: firstName, lastName: lastName }, { $inc: { attendance: 1 } });
+        await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).updateOne({ firstName: firstName.toUpperCase(), lastName: lastName.toUpperCase() }, { $inc: { attendance: 1 } });
       } else {
-        await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).insertOne({ uid: uid, firstName: firstName, lastName: lastName, attendance: 1 });
+        await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).insertOne({ uid: uid, firstName: firstName.toUpperCase(), lastName: lastName.toUpperCase(), attendance: 1 });
       }
 
     }
