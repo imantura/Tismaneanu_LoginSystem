@@ -1,0 +1,11 @@
+{
+  "name": "tismaneanu_loginsystem",
+  "version": "1.0.0",
+  "description": "This is a web-service I developed to make taking attendance less time consuming for me as a teaching assistant.",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

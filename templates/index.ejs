@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in for class</title>
+  </head>
+  <body>
+    <div id="attendance">
+      <form action="/logedIn" method="post" onsubmit="return validateForm()">
+        <fieldset>
+          <h2>Welcome!</h2>
+          <strong>First Name:</strong>
+          <input type="text" name="firstName" required />
+          <strong>Last Name:</strong>
+          <input type="text" name="lastName" required />
+          <strong>UID:</strong>
+          <input type="text" name="uid" required /><br />
+          <br />
+          <input type="reset" />
+          <input type="submit" value="Submit Attendance" />
+          <br /><br />
+        </fieldset>
+      </form>
+    </div>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url("/images/window.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #attendance {
+        font-family: cursive, "Times New Roman", Times, serif;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        height: 350px;
+        font-size: 15px;
+        text-align: center;
+        color: rgb(138, 154, 91);
+      }
+    </style>
+    <script>
+      document
+      function validateForm() {
+        var uid = document.getElementsByName("uid")[0].value;
+        console.log(uid); 
+        const re = new RegExp("[0-9]+");
+        if (!re.test(uid)) {
+          alert("Invalid UID. Please enter a valid UID consisting of only numbers.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
