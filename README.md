@@ -14,4 +14,4 @@ A video with instructions on how to run: https://youtu.be/0cO5HE4Q34o
 
 How I implemented this in class: 
   Every class, for the first five minutes, I would display the following QR code which was linked to the login application hosted on render.com. This enabled class discussions to be much more productive, maximizing time left for learning within the class enviorment. 
-![495qr](https://github.com/imantura/Tismaneanu_LoginSystem/assets/143624557/bf3f1cb7-04f8-4982-a51c-1430bbb5946c)
+![Untitled 1](https://github.com/imantura/Tismaneanu_LoginSystem/assets/143624557/976ad34c-5b92-457e-a8af-87dbbe95ba5c)
